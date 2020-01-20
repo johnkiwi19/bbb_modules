@@ -44,7 +44,20 @@ a01_Create_the_Dirs() {
 }
 
 
+a02_create_module_file(){
+    h1="a02_create_module_file  ";aaa_h1
+    
+cat << EOF > src/com.greetings/module-info.java
+module com.greetings { }
+EOF
+
+tree -L 2 src/
+nl src/com.greetings/module-info.java
+echo
+}
 
 
 
 a01_Create_the_Dirs
+a02_create_module_file
+
