@@ -20,3 +20,14 @@ LIGHTBLUE='\033[1;34m'
 NC='\033[0m' # No Color
 COLOR=${LIGHTBLUE}
 C1=${BLUE}
+
+
+# Heading Functions
+aaa_h1(){
+    echo -e "${COLOR}\n\n##    $h1 ${NC}"
+    echo -e "${COLOR}##    ===========================================\n${NC}"
+}
+
+aaa_h2(){
+    echo -e "${C1}##  $h2 ${NC}"
+}
