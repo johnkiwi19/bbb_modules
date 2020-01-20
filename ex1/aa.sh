@@ -42,3 +42,9 @@ a01_Create_the_Dirs() {
     mkdir -p mods/com.greetings
     tree
 }
+
+
+
+
+
+a01_Create_the_Dirs
