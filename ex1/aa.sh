@@ -57,7 +57,24 @@ echo
 }
 
 
+a03_create_the_Main_file() {
+    h1="a03_create_the_Main_file ";aaa_h1
+cat << EOF > src/com.greetings/com/greetings/Main.java
+    package com.greetings;
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Greetings!");
+        }
+    }
+EOF
+
+tree src/com.greetings/com/greetings/
+nl src/com.greetings/com/greetings/Main.java 
+
+}
 
 a01_Create_the_Dirs
 a02_create_module_file
+a03_create_the_Main_file
+
 
