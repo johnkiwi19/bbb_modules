@@ -1,4 +1,4 @@
- 
+
 #!/bin/bash
 
 #You can use these ANSI escape codes:
@@ -50,10 +50,10 @@ a02_create_module_file(){
 cat << EOF > src/com.greetings/module-info.java
 module com.greetings { }
 EOF
-
-tree -L 2 src/
-nl src/com.greetings/module-info.java
-echo
+    
+    tree -L 2 src/
+    nl src/com.greetings/module-info.java
+    echo
 }
 
 
@@ -67,14 +67,26 @@ cat << EOF > src/com.greetings/com/greetings/Main.java
         }
     }
 EOF
+    
+    tree src/com.greetings/com/greetings/
+    nl src/com.greetings/com/greetings/Main.java
+    
+}
 
-tree src/com.greetings/com/greetings/
-nl src/com.greetings/com/greetings/Main.java 
+a04_create_the_modules() {
+    h1="a04_create_the_modules ";aaa_h1
+    echo -e "We will be createin the class files"
+    tree  mods
 
+    javac -d mods/com.greetings \
+             src/com.greetings/module-info.java \
+             src/com.greetings/com/greetings/Main.java
+    
+    tree mods
 }
 
 a01_Create_the_Dirs
 a02_create_module_file
 a03_create_the_Main_file
-
+a04_create_the_modules
 
