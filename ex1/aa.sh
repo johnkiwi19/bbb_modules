@@ -77,16 +77,31 @@ a04_create_the_modules() {
     h1="a04_create_the_modules ";aaa_h1
     echo -e "We will be createin the class files"
     tree  mods
-
+    
     javac -d mods/com.greetings \
-             src/com.greetings/module-info.java \
-             src/com.greetings/com/greetings/Main.java
+    src/com.greetings/module-info.java \
+    src/com.greetings/com/greetings/Main.java
     
     tree mods
+}
+a05_run_the_modules(){
+    h1="a05_run_the_modules()";aaa_h1
+    
+    java --module-path mods --module com.greetings/com.greetings.Main
+    
+    
+    echo -e  "
+$ java --module-path mods
+       --module com.greetings/com.greetings.Main
+
+* --module-path is the module path, its value is one or more directories
+  that contain modules.
+* The -m option specifies the main module,
+    * the value after the slash is the class name of the main class in the module"
 }
 
 a01_Create_the_Dirs
 a02_create_module_file
 a03_create_the_Main_file
 a04_create_the_modules
-
+a05_run_the_modules
